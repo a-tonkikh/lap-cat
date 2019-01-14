@@ -1,0 +1,143 @@
+.cats__list {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.cats__item {
+  border-radius: 120px;
+  color: #fff;
+  cursor: pointer;
+  height: 230px;
+  margin: 15px 10px;
+  margin-top: 0;
+  position: relative;
+  perspective: 1000px;
+  transition: 0.3s;
+  width: 230px;
+}
+
+.cats__item:hover .cats__front, .cats__item:hover .cats__back {
+  box-shadow: 0 0 0 10px #dbc1bc;
+  transition: 0.2s;
+}
+
+.cats__about {
+  padding: 40px;
+  pointer-events: none;
+}
+
+.cats__front, .cats__back {
+  align-items: center;
+  backface-visibility: hidden;
+  border-radius: 120px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  height: 230px;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  transition: 1s;
+  top: 0;
+  width: 230px;
+}
+
+.cats__front img {
+  border-radius: 120px;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.cats__back {
+  background-color: #dbc1bc;
+  transform: rotateY(180deg);
+
+}
+
+.cats__item--closed .cats__front {
+  transform: rotateY(0);
+  transition-duration: 0.3s;
+}
+
+.cats__item--closed .cats__back {
+  transform: rotateY(180deg);
+  transition-duration: 0.3s;
+}
+
+.cats__item--opened .cats__front {
+  transform: rotateY(180deg);
+  transition-duration: 0.3s;
+}
+
+.cats__item--opened .cats__back {
+  transform: rotateY(360deg);
+  transition-duration: 0.3s;
+}
+
+.cats__item h3, .cats__item p {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 22px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 0;
+  text-align: center;
+}
+
+.cats__item p {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cats__name {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.cats__link-container {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.cats__link {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+@media (max-width: @tablet-width-max) {
+  .cats {
+    &--catalog {
+      margin-top: 60px;
+    }
+  }
+
+  .cats__title {
+    margin-bottom: 5px;
+  }
+
+  .cats__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  .cats__item {
+    margin: 20px;
+  }
+}
+
+@media (max-width: @mobile-width-max)  {
+  .cats__item {
+      margin: 10px;
+  }
+}

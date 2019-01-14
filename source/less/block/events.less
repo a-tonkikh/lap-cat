@@ -1,0 +1,84 @@
+.events {
+  padding: 100px 0;
+}
+
+.events__title {
+  margin-bottom: 30px;
+}
+
+.events__list {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  list-style: none;
+  margin: auto 0;
+  padding: 0;
+}
+
+.events__list p {
+  margin: 0;
+  padding: 0;
+}
+
+.events__item {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  &:last-child {
+    margin-bottom: 15px;
+  }
+}
+
+p.events__date {
+  margin-bottom: 5px;
+}
+
+p.events__time, p.events__sold, p.events__price {
+  margin-left: 40px;
+}
+
+.events__sold {
+  font-weight: bold;
+}
+
+.events__contact {
+  font-size: 20px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 0;
+  text-align: center;
+}
+
+@media (max-width: @tablet-width-max) {
+  .events {
+    padding: 85px 0 5px;
+  }
+}
+
+@media (max-width: @mobile-width-max) {
+  .events {
+    padding: 15px 0 10px;
+  }
+
+  .events__title {
+    margin-bottom: 10px;
+  }
+
+  .events__list {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  p.events__date {
+    margin: 0 auto;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  p.events__time, p.events__sold, p.events__price {
+    margin: 0 auto;
+    margin-left: auto;
+    width: 300px;
+  }
+}

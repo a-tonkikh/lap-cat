@@ -1,0 +1,155 @@
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 1000px;
+
+  &--left {
+    width: 50%;
+    margin-left: 0;
+  }
+
+  &--right {
+    width: 50%;
+    margin-right: 0;
+  }
+
+  &--adoption {
+    position: relative;
+
+    &::after {
+      background-image: url("../img/adopted.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 300px;
+      content: "";
+      height: 566px;
+      position: absolute;
+      right: -650px;
+      top: -120px;
+      width: 566px;
+    }
+  }
+
+  &--event {
+    position: relative;
+    min-height: 360px;
+
+    &::after {
+      background-image: url("../img/christmas.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 300px;
+      content: "";
+      height: 566px;
+      position: absolute;
+      left: -650px;
+      top: -70px;
+      width: 566px;
+      z-index: 5;
+    }
+  }
+}
+
+.container__inner {
+  width: 500px;
+  margin: 0 auto;
+  padding: 0;
+
+  &--left {
+    margin-right: 0;
+  }
+
+  &--right {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: @tablet-width-max) {
+  .container {
+    padding: 0;
+    width: 750px;
+
+    &--left {
+      width: 50%;
+      margin-left: 0;
+    }
+
+    &--right {
+      width: 50%;
+      margin-right: 0;
+    }
+
+    &--adoption {
+      position: relative;
+
+      &::after {
+        height: 420px;
+        right: -430px;
+        top: -40px;
+        width: 420px;
+      }
+    }
+
+    &--event {
+      position: relative;
+
+      &::after {
+        height: 420px;
+        left: -435px;
+        top: -13px;
+        width: 420px;
+      }
+    }
+  }
+
+  .container__inner {
+    width: 380px;
+  }
+}
+
+@media (max-width: @mobile-width-max) {
+  .container {
+    width: 90%;
+
+    &--left {
+      width: 90%;
+      margin-left: auto;
+    }
+
+    &--right {
+      width: 90%;
+      margin-right: auto;
+    }
+
+    &--adoption {
+      position: relative;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &--event {
+      min-height: auto;
+      position: relative;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .container__inner {
+    width: 100%;
+
+    &--left {
+      margin-right: auto;
+    }
+
+    &--right {
+      margin-left: auto;
+    }
+  }
+}

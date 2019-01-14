@@ -1,0 +1,43 @@
+.link {
+  color: #151b27;
+  font-size: 24px;
+  position: relative;
+  text-decoration: none;
+  text-transform: lowercase;
+  z-index: 10;
+
+  &--intext {
+    font-size: 18px;
+  }
+
+  &::after {
+    background-color: #dbc1bc;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: -2%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 105%;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: #fff;
+    transition-duration: 0.3s;
+
+    &::after {
+      height: 100%;
+      transition-duration: 0.2s;
+    }
+  }
+
+  &:active {
+    color: #fff;
+
+    &::after {
+      height: 100%;
+    }
+  }
+}

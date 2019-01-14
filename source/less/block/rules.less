@@ -1,0 +1,113 @@
+.rules__list {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 24px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.rules__item {
+  margin: 0 10px;
+  padding: 0;
+  padding-top: 65px;
+  position: relative;
+  text-align: center;
+  width: 150px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--respect::before {
+    background-image: url("../img/respect.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+    height: 60px;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+  }
+
+  &--pickup::before {
+    background-image: url("../img/up.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+    height: 60px;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+  }
+
+  &--food::before {
+    background-image: url("../img/hamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+    height: 60px;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+  }
+
+  &--flash::before {
+    background-image: url("../img/flash.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+    height: 60px;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+  }
+}
+
+@media (max-width: @mobile-width-max) {
+  .rules__list {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .rules__item {
+    margin: 0 5px;
+    margin-bottom: 10px;
+    width: 125px;
+
+    &:first-child {
+      margin-left: 5px;
+    }
+
+    &:last-child {
+      margin-right: 5px;
+    }
+  }
+}
